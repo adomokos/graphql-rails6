@@ -38,3 +38,21 @@ mutation {
   }
 }
 ```
+
+To sign in a user:
+
+```
+mutation {
+  signinUser(
+    email: {
+      email:"test@example.com",
+      password:"123456"
+    }
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
+```
