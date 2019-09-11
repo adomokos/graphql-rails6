@@ -40,17 +40,5 @@ docker-hop-on: ## Jump on the docker instance
 	docker exec -ti $(INSTANCE_NAME) /bin/bash
 .PHONY: docker-hop-on
 
-run-example: ## Run an example that finds a rate
-	curl -i -X POST "$(SERVER_ADDRESS)/api/v1/rates/find" \
-		-H "accept: application/json" -H "Content-Type: application/json" -d \
-		"{ \"start_time\": \"2015-07-01T07:00:00-05:00\", \"end_time\": \"2015-07-01T12:00:00-05:00\"}"
-.PHONY: run-example
-
-run-example-no-result: ## Run an example that finds a rate
-	curl -i -X POST "$(SERVER_ADDRESS)/api/v1/rates/find" \
-		-H "accept: application/json" -H "Content-Type: application/json" -d \
-		"{ \"start_time\": \"2015-07-04T07:00:00+05:00\", \"end_time\": \"2015-07-04T20:00:00+05:00\"}"
-.PHONY: run-example-no-result
-
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
