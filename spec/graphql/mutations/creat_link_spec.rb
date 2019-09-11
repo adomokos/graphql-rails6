@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Mutations::CreateLink' do
+RSpec.describe Mutations::CreateLink do
   def perform(user: nil, **args)
     Mutations::CreateLink.new(object: nil, context: {}).resolve(args)
   end
