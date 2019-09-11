@@ -1,8 +1,23 @@
-# README
+## Learning about GraphQL with Rails 6
 
-Learning about GraphQL from [here](https://www.howtographql.com/graphql-ruby/1-getting-started/)
+Learning about GraphQL from [here](https://www.howtographql.com/graphql-ruby/1-getting-started/).
 
 ### Examples:
+
+To create a link:
+
+```
+mutation {
+  createLink(
+    url: "http://npmjs.com/package/graphql-tools",
+    description: "Best tools!",
+  ) {
+    id
+    url
+    description
+  }
+}
+```
 
 To create a user:
 
