@@ -60,3 +60,18 @@ mutation {
   }
 }
 ```
+
+Create a Vote:
+
+```
+mutation {
+  createVote(linkId:"1") {
+    link {
+      description
+    }
+    user {
+      name
+    }
+  }
+}
+```
