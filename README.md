@@ -4,17 +4,21 @@ Learning about GraphQL from [here](https://www.howtographql.com/graphql-ruby/1-g
 
 ### Examples:
 
-To create a link:
+To create a link (after a signed in user):
 
 ```
 mutation {
   createLink(
-    url: "http://npmjs.com/package/graphql-tools",
-    description: "Best tools!",
+    url: "http://localhost:3000/graphql",
+    description: "Your testing playground",
   ) {
     id
     url
     description
+    postedBy {
+      id
+      name
+    }
   }
 }
 ```
