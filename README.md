@@ -87,3 +87,22 @@ query {
   }
 }
 ```
+
+Same with more info:
+
+```
+query {
+  allLinks {
+    id
+    postedBy {
+      createdAt
+      name
+      votes {
+        link {
+          description
+        }
+      }
+    }
+  }
+}
+```
