@@ -106,3 +106,18 @@ query {
   }
 }
 ```
+
+Query data:
+
+```
+query {
+  allLinks(filter:{
+    descriptionContains:"playground"
+    OR:{
+      descriptionContains:"Query"
+    }
+  }) {
+    description
+  }
+}
+```
