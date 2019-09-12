@@ -75,3 +75,15 @@ mutation {
   }
 }
 ```
+
+Get all votes:
+
+```
+query {
+  allLinks {
+    votes {
+      id
+    }
+  }
+}
+```
