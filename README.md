@@ -121,3 +121,15 @@ query {
   }
 }
 ```
+
+Paginated query:
+
+```
+{
+  allLinks(first:2, skip: 1){
+    id
+    url
+    description
+  }
+}
+```
