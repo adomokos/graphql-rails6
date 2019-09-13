@@ -38,5 +38,4 @@ RUN yarn install --check-files
 
 # Run our app
 # When there is a DB - bundle exec rails db:create db:migrate db:seed &&
-CMD RAILS_ENV=${RAILS_ENV} bundle exec rails db:create db:migrate db:seed \
-  && bundle exec rails s -p ${PORT} -b '0.0.0.0'
+CMD RAILS_ENV=${RAILS_ENV} bundle exec rails s -p ${PORT} -b '0.0.0.0'

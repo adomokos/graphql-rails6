@@ -20,7 +20,7 @@ generate-swagger-doc: ## Generate Swagger documentation
 
 docker-setup: ## Sets up the app using Docker and Docker Compose
 	docker-compose build
-	# docker-compose run --rm web rails db:create db:migrate
+	docker-compose run --rm web bundle exec rails db:create db:migrate
 	$(MAKE) docker-run-container
 .PHONY: docker-setup
 
